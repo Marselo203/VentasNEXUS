@@ -8,10 +8,10 @@ namespace VentasNEXUS.Models
 {
     public class Client
     { 
-       /* public int ID { get; set; }
+        public int ID { get; set; }
         public string name { get; set; }
         public string lastName { get; set; }
-        public int nit { get; set; }*/
+        public int nit { get; set;}
         
 
     }
