@@ -7,8 +7,8 @@ namespace VentasNEXUS.Models
 {
     public class Sales
     {
-        public int id_s { get; set; }
+        public int ID { get; set; }
         public Client Client_s{get; set;}
-        public Products product_s { get; set; }
+        public List<Products> listaProductos_S { get; set; }
     }
 }
