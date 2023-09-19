@@ -83,11 +83,16 @@ Relaciones:
 
 ![Captura de Pantalla](https://github.com/Marselo203/VentasNEXUS/raw/master/READ/Captura%20de%20pantalla%20(646).png)
 
-*CREACION DE PRODUCTO
+## CREACION DE PRODUCTO
+
 ![Captura de Pantalla](https://github.com/Marselo203/VentasNEXUS/raw/master/READ/Captura%20de%20pantalla%20(647).png)
-*DETALLES DEL PRODUCTO
+
+## DETALLES DEL PRODUCTO
+
 ![Captura de Pantalla](https://github.com/Marselo203/VentasNEXUS/raw/master/READ/Captura%20de%20pantalla%20(650).png)
-*REGISTRO DE VENTAS
+
+## REGISTRO DE VENTAS
+
 ![Captura de Pantalla](https://github.com/Marselo203/VentasNEXUS/raw/master/READ/Captura%20de%20pantalla%20(649).png)
 
 
