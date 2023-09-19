@@ -57,8 +57,5 @@ namespace VentasNEXUS.Pages.Sales
             }
             return Page();
         }
-
-        
-
     }
 }

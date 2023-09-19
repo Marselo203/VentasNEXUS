@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using VentasNEXUS.Data;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using VentasNEXUS.Models;
 
 namespace VentasNEXUS.Pages.Products
@@ -20,10 +21,23 @@ namespace VentasNEXUS.Pages.Products
         }
 
         public IList<Models.Products> Products { get;set; }
+        [BindProperty(SupportsGet = true)]
+        public string? SearchString { get; set; }
+        public SelectList? Genres { get; set; }
+        [BindProperty(SupportsGet = true)]
+        public string? producGenre { get; set; }
 
         public async Task OnGetAsync()
         {
             Products = await _context.Products.ToListAsync();
+            var pro = from a in _context.Products
+                         select a;
+            if (!string.IsNullOrEmpty(SearchString))
+            {
+                pro = pro.Where(s => s.Name.Contains(SearchString));
+            }
+
+            Products = await pro.ToListAsync();
         }
     }
 }
