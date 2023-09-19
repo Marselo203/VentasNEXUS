@@ -62,5 +62,6 @@ Relaciones:
 
 
 ### IMAGENES DE FUNCIONAMIENTO: 
-![Ejemplo de Imagen](./READ/Captura de pantalla (641).png)
+![Captura de Pantalla](https://github.com/Marselo203/VentasNEXUS/raw/master/READ/Captura%20de%20pantalla%20(641).png)
+
 
