@@ -13,16 +13,20 @@ namespace VentasNEXUS.Pages.Sales
     public class CreateModel : PageModel
     {
         private readonly VentasNEXUS.Data.VentasNEXUSContext _context;
+        
 
         public CreateModel(VentasNEXUS.Data.VentasNEXUSContext context)
         {
             _context = context;
         }
 
+        public List<Models.Products> listaProductos_S { get; set; }
         public IActionResult OnGet()
         {
+            listaProductos_S = _context.Products.ToList();
             return Page();
         }
+    
 
         [BindProperty]
         public Models.Sales Sales { get; set; }

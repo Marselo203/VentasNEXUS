@@ -5,16 +5,45 @@
     ViewData["Title"] = "Create";
 }
 
+
 <h1>Create</h1>
 
 <h4>Sales</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form method="post">
+        <form >
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+
+
+                <select id="miSpinner" name="miSpinner">
+                    <option value="">Selecciona un producto</option>
+                    @foreach (var producto in Model.listaProductos_S)
+                    {
+                        <option value="@producto.ID">@producto.Name</option>
+                    }
+                </select>
+
+                <button id="btnAgregarAlCarrito">Agregar al Carrito</button>
+
+                <h3>Carrito de Compras:</h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Precio</th>
+                            <th>Descripción</th>
+                            <th>Stock</th>
+                        </tr>
+                    </thead>
+                    <tbody id="carrito">
+                       
+                    </tbody>
+                </table>
+
+
             </div>
         </form>
     </div>
@@ -25,5 +54,44 @@
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{<script>
+        var carrito = [];
+
+        // Evento al hacer clic en el botón "Agregar al Carrito"
+        document.getElementById("btnAgregarAlCarrito").addEventListener("click", function () {
+            var select = document.getElementById("miSpinner");
+            var selectedIndex = select.selectedIndex;
+
+            if (selectedIndex !== -1) {
+                var selectedValue = select.options[selectedIndex].value;
+
+                // Obtener el producto seleccionado de la lista de productos
+                var productoSeleccionado = @Json.Serialize(Model.listaProductos_S);
+
+                // Agregar el producto al carrito
+                carrito.push(productoSeleccionado[selectedValue]);
+
+                // Actualizar la tabla del carrito
+                var tbody = document.getElementById("carrito");
+                var row = tbody.insertRow();
+                var producto = carrito[carrito.length - 1];
+
+                // Agregar celdas a la fila
+                var cellId = row.insertCell(0);
+                cellId.innerHTML = producto.ID;
+
+                var cellNombre = row.insertCell(1);
+                cellNombre.innerHTML = producto.Name;
+
+                var cellPrecio = row.insertCell(2);
+                cellPrecio.innerHTML = producto.Price;
+
+                var cellDescripcion = row.insertCell(3);
+                cellDescripcion.innerHTML = producto.Description;
+
+                var cellStock = row.insertCell(4);
+                cellStock.innerHTML = producto.Stock;
+            }
+        });
+</script>}
 }

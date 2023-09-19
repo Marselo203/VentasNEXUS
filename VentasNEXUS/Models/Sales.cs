@@ -10,5 +10,7 @@ namespace VentasNEXUS.Models
         public int ID { get; set; }
         public Client Client_s{get; set;}
         public List<Products> listaProductos_S { get; set; }
+      
+
     }
 }

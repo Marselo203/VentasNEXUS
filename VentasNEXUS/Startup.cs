@@ -10,11 +10,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using VentasNEXUS.Data;
+using Microsoft.AspNetCore.Http;
+
 
 namespace VentasNEXUS
 {
     public class Startup
-    {
+    {   
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -25,6 +27,11 @@ namespace VentasNEXUS
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDistributedMemoryCache(); // Agrega la memoria como almacenamiento de sesión
+            services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromMinutes(30); // Configura el tiempo de expiración de la sesión
+            });
             services.AddRazorPages();
 
             services.AddDbContext<VentasNEXUSContext>(options =>
@@ -49,7 +56,7 @@ namespace VentasNEXUS
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            app.UseSession();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

@@ -1,30 +1,73 @@
 ﻿@page
 @model VentasNEXUS.Pages.Sales.IndexModel
+<h1>COMPRAR</h1>
+<h2>Cliente:</h2>
+<select id="miSpinner" name="miSpinner">
+    <option value="">Seleccione Cliente:</option>
+    @foreach (var item in Model.clientes)
+    {
+        <option value="@item.ID">@item.Name</option>
+    }
+</select>
+<h3>Carrito de Compras</h3>
 
-@{
-    ViewData["Title"] = "Index";
-}
-
-<h1>Index</h1>
-
-<p>
-    <a asp-page="Create">Create New</a>
-</p>
+<h4>Productos Disponibles</h4>
 <table class="table">
     <thead>
         <tr>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Descripción</th>
+            <th>Stock</th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Sales) {
-        <tr>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var producto in Model.listaProductos)
+        {
+            <tr>
+                <td>@producto.Name</td>
+                <td>@producto.Price</td>
+                <td>@producto.Description</td>
+                <td>@producto.Stock</td>
+                <td>
+                    <form action="/Sales/Index" method="post">
+                       
+                            <input type="hidden" name="id" value="@producto.ID">
+                            <button id="btnAgregarAlCarrito" >Agregar Producto</button>
+</form>
+
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
+
+<h4>Carrito de Compras</h4>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Descripción</th>
+            <th>Stock</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var producto in Model.Carrito)
+        {
+            <tr>
+                <td>@producto.Name</td>
+                <td>@producto.Price</td>
+                <td>@producto.Description</td>
+                <td>@producto.Stock</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+
+@section scripts {
+
+}
