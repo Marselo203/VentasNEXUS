@@ -53,7 +53,7 @@ Clase: Producto
 - Nombre
 - Descripción
 - Precio
-- Existencias
+-Stock
 
 Relaciones:
 - Usuario (1) ---- (n) Venta
