@@ -1,0 +1,26 @@
+﻿/* Estilos personalizados en cliente.css */
+
+/* Establece el fondo de la página */
+body {
+    background-image: url('../../css/fondos/fondo5.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: page;
+    color: blue; /* Hace que el texto sea blanco */
+}
+
+/* Estilos para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid blue; /* Borde sólido azul de 2px para la tabla */
+    color: white; /* Hace que el texto dentro de la tabla sea blanco */
+}
+
+th, td {
+    border: 2px solid blue; /* Borde sólido azul de 2px para las celdas de la tabla */
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: white; /* Hace que el texto dentro de las celdas sea blanco */
+}

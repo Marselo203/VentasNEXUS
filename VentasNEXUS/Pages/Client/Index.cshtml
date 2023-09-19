@@ -5,45 +5,39 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<!-- Vincula el archivo cliente.css -->
+<link rel="stylesheet" href="~/css/cliente.css">
 
-<p>
-    <a asp-page="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Client[0].Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Client[0].LastName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Client[0].Nit)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model.Client) {
-        <tr>
-            
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LastName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nit)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+<div class="container mt-5">
+    <h1>Clientes</h1>
+
+    <p>
+        <a asp-page="Create" class="btn btn-primary">Crear Nuevo</a>
+    </p>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th class="custom-font">Nombre</th>
+                <th class="custom-font">Apellido</th>
+                <th class="custom-font">NIT</th>
+                <th class="custom-font">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Client)
+            {
+                <tr>
+                    <td class="custom-font">@Html.DisplayFor(modelItem => item.Name)</td>
+                    <td class="custom-font">@Html.DisplayFor(modelItem => item.LastName)</td>
+                    <td class="custom-font">@Html.DisplayFor(modelItem => item.Nit)</td>
+                    <td>
+                        <a asp-page="./Edit" asp-route-id="@item.ID" class="btn btn-warning btn-sm">Editar</a>
+                        <a asp-page="./Details" asp-route-id="@item.ID" class="btn btn-info btn-sm">Detalles</a>
+                        <a asp-page="./Delete" asp-route-id="@item.ID" class="btn btn-danger btn-sm">Eliminar</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

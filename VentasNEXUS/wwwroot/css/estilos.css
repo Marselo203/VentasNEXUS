@@ -1,0 +1,30 @@
+﻿/* Estilos personalizados */
+.text-center {
+    
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
+    padding: 20px; /* Espaciado interior para el contenido */
+    margin-top: 50px; /* Elimina el margen superior */
+}
+
+h1 {
+    font-size: 40px; /* Tamaño de fuente más grande */
+    font-weight: bold; /* Texto en negrita */
+    margin-bottom: 40px;
+    text-align: center; /* Espacio entre el título y los párrafos */
+}
+
+p {
+    font-size: 20px; /* Tamaño de fuente más grande para los párrafos */
+    font-weight: bold;
+    text-align: center; /* Texto en negrita */
+    margin:20px ; /* Elimina el margen predeterminado para los párrafos */
+}
+#video-background {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}

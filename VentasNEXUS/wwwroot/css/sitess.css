@@ -1,0 +1,20 @@
+﻿/* Estilos personalizados en site.css */
+
+/* Establece el fondo del cuerpo de la página */
+
+
+/* Estilos para el encabezado de navegación */
+.navbar {
+    background-color: #007bff; /* Cambia el color de fondo de la barra de navegación */
+    border-bottom: 2px solid #0056b3; /* Línea de borde inferior */
+}
+
+.navbar-brand {
+    color: #fff; /* Color del texto del logotipo */
+    font-size: 24px; /* Tamaño de fuente del logotipo */
+    font-weight: bold; /* Texto en negrita */
+}
+
+.navbar-nav .nav-link {
+    color: #fff; /* Color del texto de los enlaces de navegación */
+}

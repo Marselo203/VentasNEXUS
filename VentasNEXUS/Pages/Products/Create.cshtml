@@ -4,15 +4,15 @@
 @{
     ViewData["Title"] = "Create";
 }
+<link rel="stylesheet" href="~/css/fondos/prod.css">
+<h1>CREAR PRODUCTO</h1>
 
-<h1>Create</h1>
-
-<h4>Products</h4>
+<h4>Productos</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form method="post">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
             <div class="form-group">
                 <label asp-for="Products.Name" class="control-label"></label>
                 <input asp-for="Products.Name" class="form-control" />
@@ -30,11 +30,11 @@
             </div>
             <div class="form-group">
                 <label asp-for="Products.Stock" class="control-label"></label>
-                <input asp-for="Products.Stock" class="form-control" />
+                <input asp-for="Products.Stock" class="form-control custom-input" />
                 <span asp-validation-for="Products.Stock" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+            <div class="custom-form-group">
+                <button type="submit" class="btn btn-primary custom-btn">Crear</button>
             </div>
         </form>
     </div>
