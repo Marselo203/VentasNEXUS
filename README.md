@@ -62,6 +62,23 @@ Relaciones:
 
 
 ### IMAGENES DE FUNCIONAMIENTO: 
+*PAGINA PRINCIPAL
 ![Captura de Pantalla](https://github.com/Marselo203/VentasNEXUS/raw/master/READ/Captura%20de%20pantalla%20(641).png)
+*USUARIOS
+![Captura de Pantalla](https://github.com/Marselo203/VentasNEXUS/raw/master/READ/Captura%20de%20pantalla%20(642).png)
+*CREAR UN NUEVO USUARIO
+![Captura de Pantalla](https://github.com/Marselo203/VentasNEXUS/raw/master/READ/Captura%20de%20pantalla%20(643).png)
+*DETALLES DEL REGISTRO
+![Captura de Pantalla](https://github.com/Marselo203/VentasNEXUS/raw/master/READ/Captura%20de%20pantalla%20(644).png)
+*ELIMINACION DEL USUARIO
+![Captura de Pantalla](https://github.com/Marselo203/VentasNEXUS/raw/master/READ/Captura%20de%20pantalla%20(645).png)
+*PRODUCTOS
+![Captura de Pantalla](https://github.com/Marselo203/VentasNEXUS/raw/master/READ/Captura%20de%20pantalla%20(646).png)
+*CREACION DE PRODUCTO
+![Captura de Pantalla](https://github.com/Marselo203/VentasNEXUS/raw/master/READ/Captura%20de%20pantalla%20(647).png)
+*DETALLES DEL PRODUCTO
+![Captura de Pantalla](https://github.com/Marselo203/VentasNEXUS/raw/master/READ/Captura%20de%20pantalla%20(650).png)
+*REGISTRO DE VENTAS
+![Captura de Pantalla](https://github.com/Marselo203/VentasNEXUS/raw/master/READ/Captura%20de%20pantalla%20(649).png)
 
 
