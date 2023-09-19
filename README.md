@@ -62,5 +62,5 @@ Relaciones:
 
 
 ### IMAGENES DE FUNCIONAMIENTO: 
-![Ejemplo de Imagen](./imagen.png)
+![Ejemplo de Imagen](./READ/Captura de pantalla (641).png)
 
