@@ -62,18 +62,30 @@ Relaciones:
 
 
 ### IMAGENES DE FUNCIONAMIENTO: 
-*PAGINA PRINCIPAL
+## PAGINA PRINCIPAL
+
 ![Captura de Pantalla](https://github.com/Marselo203/VentasNEXUS/raw/master/READ/Captura%20de%20pantalla%20(641).png)
-*USUARIOS
+
+## USUARIOS
+
 ![Captura de Pantalla](https://github.com/Marselo203/VentasNEXUS/raw/master/READ/Captura%20de%20pantalla%20(642).png)
-*CREAR UN NUEVO USUARIO
+
+## CREAR UN NUEVO USUARIO
+
 ![Captura de Pantalla](https://github.com/Marselo203/VentasNEXUS/raw/master/READ/Captura%20de%20pantalla%20(643).png)
-*DETALLES DEL REGISTRO
+
+## DETALLES DEL REGISTRO
+
 ![Captura de Pantalla](https://github.com/Marselo203/VentasNEXUS/raw/master/READ/Captura%20de%20pantalla%20(644).png)
-*ELIMINACION DEL USUARIO
+
+## ELIMINACION DEL USUARIO
+
 ![Captura de Pantalla](https://github.com/Marselo203/VentasNEXUS/raw/master/READ/Captura%20de%20pantalla%20(645).png)
-*PRODUCTOS
+
+## PRODUCTOS
+
 ![Captura de Pantalla](https://github.com/Marselo203/VentasNEXUS/raw/master/READ/Captura%20de%20pantalla%20(646).png)
+
 *CREACION DE PRODUCTO
 ![Captura de Pantalla](https://github.com/Marselo203/VentasNEXUS/raw/master/READ/Captura%20de%20pantalla%20(647).png)
 *DETALLES DEL PRODUCTO
