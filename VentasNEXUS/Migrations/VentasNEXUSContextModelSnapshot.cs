@@ -81,12 +81,25 @@ namespace VentasNEXUS.Migrations
                     b.Property<int?>("Client_sID")
                         .HasColumnType("int");
 
-                    b.HasKey("ID");
+                  
 
-                    b.HasIndex("Client_sID");
+                   
 
-                    b.ToTable("Sales");
+                    b.Property<int>("compra_pro_id");
                 });
+            modelBuilder.Entity("VentasNEXUS.Models.compraCli", b =>
+            {
+                b.Property<int>("ID")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("int")
+                    .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                b.Property<int?>("products_id")
+                    .HasColumnType("int");
+
+                b.Property<int>("cantidad");
+            });
+
 
             modelBuilder.Entity("VentasNEXUS.Models.Products", b =>
                 {

@@ -2,8 +2,8 @@
 @model VentasNEXUS.Pages.Sales.IndexModel
 <h1>COMPRAR</h1>
 <h2>Cliente:</h2>
-<select id="miSpinner" name="miSpinner">
-    <option value="">Seleccione Cliente:</option>
+<select  name="miSpinner">
+    <option  value="">Seleccione Cliente:</option>
     @foreach (var item in Model.clientes)
     {
         <option value="@item.ID">@item.Name</option>
@@ -32,10 +32,10 @@
                 <td>@producto.Stock</td>
                 <td>
                     <form action="/Sales/Index" method="post">
-                       
-                            <input type="hidden" name="id" value="@producto.ID">
-                            <button id="btnAgregarAlCarrito" >Agregar Producto</button>
-</form>
+
+                        <input type="hidden" name="id" value="@producto.ID">
+                        <button id="btnAgregarAlCarrito">Agregar Producto</button>
+                    </form>
 
                 </td>
             </tr>
@@ -65,6 +65,8 @@
         }
     </tbody>
 </table>
+<a class="nav-link text-dark" asp-area="" asp-page="/Sales/Create">COMPRAR</a>
+
 
 
 

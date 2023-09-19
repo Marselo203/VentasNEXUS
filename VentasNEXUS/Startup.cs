@@ -32,6 +32,7 @@ namespace VentasNEXUS
             {
                 options.IdleTimeout = TimeSpan.FromMinutes(30); // Configura el tiempo de expiración de la sesión
             });
+            
             services.AddRazorPages();
 
             services.AddDbContext<VentasNEXUSContext>(options =>

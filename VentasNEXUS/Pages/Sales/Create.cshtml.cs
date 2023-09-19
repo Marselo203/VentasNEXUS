@@ -21,9 +21,33 @@ namespace VentasNEXUS.Pages.Sales
         }
 
         public List<Models.Products> listaProductos_S { get; set; }
+        public List<Models.Client> clie { get; set; }
+        public int spinnerRecuperado { get; set; }
+        public string nameClie { get; set; }
+        public List <Models.Products> carrito { get; set; }
+        public float suma { get; set; }
         public IActionResult OnGet()
         {
+            suma = 0;
+            carrito = ViewData["Carrito"] as List<Models.Products> ;
+            spinnerRecuperado = (int)TempData["gasheta"];
+
+            clie = _context.Client.ToList();
             listaProductos_S = _context.Products.ToList();
+            
+            for (int i = 0; i < listaProductos_S.Count; i++)
+            {
+                suma += listaProductos_S[i].Price;
+            }
+            foreach (var ga in clie)
+            { 
+                if (ga.ID == spinnerRecuperado)
+                {
+                    nameClie = ga.Name + " " + ga.LastName + " NIT: " + ga.Nit;
+                }
+
+            }
+          
             return Page();
         }
     
