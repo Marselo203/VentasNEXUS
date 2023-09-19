@@ -4,7 +4,7 @@ VENTAS VIDEOGAMES
 
 <h1 align="center"> NEXUS CODE</h1>
 
-<p align="center"><img src=" "/></p> 
+<p align="center"><img src="https://github.com/Marselo203/VentasNEXUS/raw/master/READ/Captura%20de%20pantalla%20(641).png"/></p> 
 
 ## Tabla de contenidos:
 ---
@@ -62,9 +62,6 @@ Relaciones:
 
 
 ### IMAGENES DE FUNCIONAMIENTO: 
-## PAGINA PRINCIPAL
-
-![Captura de Pantalla](https://github.com/Marselo203/VentasNEXUS/raw/master/READ/Captura%20de%20pantalla%20(641).png)
 
 ## USUARIOS
 
